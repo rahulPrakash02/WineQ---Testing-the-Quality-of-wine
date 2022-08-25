@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wine QualIT | Tool for Quality Wine</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link href = "static/styles.css" rel = "stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class = "first-box">
+      <div class = "text-side">
+        <h1 style = "font-family: Sofia; color: crimson;">Wine QualIT</h1>
+        <br>
+        <p style = "font-family: Roboto; size: 18px;">A Machine Learning Project which tests the quality of wine based on the given factors. The values are entered, and Random Forest Classification is used to ascertain whether it is low-quality wine or high-quality wine. Frontend developed using HTML and Bootstrap, and Backend developed using Python and Flask.</p>
+        <br>
+        <a href="#A"><button type="button" class="btn btn-danger btn-lg">Go To Tests</button></a>
+      </div>
+
+      <div class = "wine-side">
+        <img src = "static/wine-intro.png" height = "300px">
+      </div>
+    </div>
+
+    
+      <form action = "/predict" method = "POST" name = "wine">
+        <a name="A"></a>
+        <!--Input for Alcohol-->
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label" style="color: crimson;">Alcohol</label>
+            <input type="text" class="form-control" id="text1" name = "alcohol" aria-describedby="textHelp">
+        </div>
+
+        <!--Input for Residual Sugar-->
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label" style="color: crimson;">Residual Sugar</label>
+            <input type="text" class="form-control" id="text1" name = "residual_sugar" aria-describedby="textHelp">
+        </div>
+
+        <!--Input for Fixed Acidity-->
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label" style="color: crimson;">Fixed Acidity</label>
+            <input type="text" class="form-control" id="text1" name = "fixed_acidity" aria-describedby="textHelp">
+        </div>
+
+        <!--Input for pH-->
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label" style="color: crimson;">pH</label>
+            <input type="text" class="form-control" id="text1" name = "pH" aria-describedby="textHelp">
+        </div>
+
+        <!--Input for Free Sulfur Dioxide-->
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label" style="color: crimson;">Free Sulfur Dioxide</label>
+            <input type="text" class="form-control" id="text1" name = "free_sulfur_dioxide" aria-describedby="textHelp">
+        </div>
+        
+        <br>
+        <centre>
+          <button type="submit" class="btn btn-danger">Submit</button>
+        </centre>
+        
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
